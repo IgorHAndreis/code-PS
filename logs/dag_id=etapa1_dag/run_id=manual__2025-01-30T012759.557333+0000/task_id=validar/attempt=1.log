@@ -1,0 +1,32 @@
+[2025-01-30T01:28:05.001+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-01-30T01:28:05.023+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: etapa1_dag.validar manual__2025-01-30T01:27:59.557333+00:00 [queued]>
+[2025-01-30T01:28:05.034+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: etapa1_dag.validar manual__2025-01-30T01:27:59.557333+00:00 [queued]>
+[2025-01-30T01:28:05.035+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 1
+[2025-01-30T01:28:05.205+0000] {taskinstance.py:2889} INFO - Executing <Task(BranchPythonOperator): validar> on 2025-01-30 01:27:59.557333+00:00
+[2025-01-30T01:28:05.214+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=350) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-01-30T01:28:05.216+0000] {standard_task_runner.py:72} INFO - Started process 352 to run task
+[2025-01-30T01:28:05.216+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'etapa1_dag', 'validar', 'manual__2025-01-30T01:27:59.557333+00:00', '--job-id', '25', '--raw', '--subdir', 'DAGS_FOLDER/etapa1_dag.py', '--cfg-path', '/tmp/tmpgv2_yhe1']
+[2025-01-30T01:28:05.218+0000] {standard_task_runner.py:105} INFO - Job 25: Subtask validar
+[2025-01-30T01:28:05.269+0000] {task_command.py:467} INFO - Running <TaskInstance: etapa1_dag.validar manual__2025-01-30T01:27:59.557333+00:00 [running]> on host 8fdf061243ba
+[2025-01-30T01:28:05.365+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='etapa1_dag' AIRFLOW_CTX_TASK_ID='validar' AIRFLOW_CTX_EXECUTION_DATE='2025-01-30T01:27:59.557333+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-01-30T01:27:59.557333+00:00'
+[2025-01-30T01:28:05.366+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2025-01-30T01:28:05.367+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2025-01-30T01:28:05.367+0000] {logging_mixin.py:190} INFO - Current task name:validar state:running start_date:2025-01-30 01:28:05.024096+00:00
+[2025-01-30T01:28:05.368+0000] {logging_mixin.py:190} INFO - Dag name:etapa1_dag and current dag run status:running
+[2025-01-30T01:28:05.368+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-01-30T01:28:05.369+0000] {baseoperator.py:421} WARNING - BranchPythonOperator.execute cannot be called outside TaskInstance!
+[2025-01-30T01:28:05.379+0000] {python.py:240} INFO - Done. Returned value was: invalido
+[2025-01-30T01:28:05.380+0000] {branch.py:38} INFO - Branch into invalido
+[2025-01-30T01:28:05.381+0000] {skipmixin.py:230} INFO - Following branch ('invalido',)
+[2025-01-30T01:28:05.392+0000] {skipmixin.py:278} INFO - Skipping tasks [('copia', -1)]
+[2025-01-30T01:28:05.446+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-01-30T01:28:05.447+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=etapa1_dag, task_id=validar, run_id=manual__2025-01-30T01:27:59.557333+00:00, execution_date=20250130T012759, start_date=20250130T012805, end_date=20250130T012805
+[2025-01-30T01:28:05.460+0000] {logging_mixin.py:190} INFO - Task instance in success state
+[2025-01-30T01:28:05.461+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: running
+[2025-01-30T01:28:05.462+0000] {logging_mixin.py:190} INFO - Dag name:etapa1_dag queued_at:2025-01-30 01:27:59.570816+00:00
+[2025-01-30T01:28:05.462+0000] {logging_mixin.py:190} INFO - Task hostname:8fdf061243ba operator:BranchPythonOperator
+[2025-01-30T01:28:05.512+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-01-30T01:28:05.541+0000] {taskinstance.py:3895} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-01-30T01:28:05.545+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

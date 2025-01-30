@@ -1,0 +1,67 @@
+[2025-01-30T04:30:14.623+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-01-30T04:30:14.657+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: etapa2_dag.copia manual__2025-01-30T03:32:35.404173+00:00 [queued]>
+[2025-01-30T04:30:14.671+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: etapa2_dag.copia manual__2025-01-30T03:32:35.404173+00:00 [queued]>
+[2025-01-30T04:30:14.672+0000] {taskinstance.py:2866} INFO - Starting attempt 12 of 12
+[2025-01-30T04:30:14.692+0000] {taskinstance.py:2889} INFO - Executing <Task(PythonOperator): copia> on 2025-01-30 03:32:35.404173+00:00
+[2025-01-30T04:30:14.701+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=1217) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-01-30T04:30:14.703+0000] {standard_task_runner.py:72} INFO - Started process 1219 to run task
+[2025-01-30T04:30:14.704+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'etapa2_dag', 'copia', 'manual__2025-01-30T03:32:35.404173+00:00', '--job-id', '46', '--raw', '--subdir', 'DAGS_FOLDER/etapa2_dag.py', '--cfg-path', '/tmp/tmpn0l293wf']
+[2025-01-30T04:30:14.706+0000] {standard_task_runner.py:105} INFO - Job 46: Subtask copia
+[2025-01-30T04:30:14.758+0000] {task_command.py:467} INFO - Running <TaskInstance: etapa2_dag.copia manual__2025-01-30T03:32:35.404173+00:00 [running]> on host eed2ce10479b
+[2025-01-30T04:30:14.873+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='etapa2_dag' AIRFLOW_CTX_TASK_ID='copia' AIRFLOW_CTX_EXECUTION_DATE='2025-01-30T03:32:35.404173+00:00' AIRFLOW_CTX_TRY_NUMBER='12' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-01-30T03:32:35.404173+00:00'
+[2025-01-30T04:30:14.875+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2025-01-30T04:30:14.875+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2025-01-30T04:30:14.876+0000] {logging_mixin.py:190} INFO - Current task name:copia state:running start_date:2025-01-30 04:30:14.658578+00:00
+[2025-01-30T04:30:14.876+0000] {logging_mixin.py:190} INFO - Dag name:etapa2_dag and current dag run status:running
+[2025-01-30T04:30:14.877+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-01-30T04:30:14.915+0000] {logging_mixin.py:190} INFO - Table: categories -- parquetfile: /data/postgres/categories/2025-01-30/file.parquet
+[2025-01-30T04:30:15.201+0000] {logging_mixin.py:190} INFO - Tabela categories não existe. Criando a tabela...
+[2025-01-30T04:30:15.203+0000] {logging_mixin.py:190} INFO - Erro ao atualizar ou criar tabela categories: name 'get_postgres_type' is not defined
+[2025-01-30T04:30:15.213+0000] {logging_mixin.py:190} INFO - Table: customers -- parquetfile: /data/postgres/customers/2025-01-30/file.parquet
+[2025-01-30T04:30:15.235+0000] {logging_mixin.py:190} INFO - Tabela customers não existe. Criando a tabela...
+[2025-01-30T04:30:15.236+0000] {logging_mixin.py:190} INFO - Erro ao atualizar ou criar tabela customers: name 'get_postgres_type' is not defined
+[2025-01-30T04:30:15.248+0000] {logging_mixin.py:190} INFO - Table: customer_customer_demo -- parquetfile: /data/postgres/customer_customer_demo/2025-01-30/file.parquet
+[2025-01-30T04:30:15.266+0000] {logging_mixin.py:190} INFO - Tabela customer_customer_demo não existe. Criando a tabela...
+[2025-01-30T04:30:15.268+0000] {logging_mixin.py:190} INFO - Erro ao atualizar ou criar tabela customer_customer_demo: name 'get_postgres_type' is not defined
+[2025-01-30T04:30:15.280+0000] {logging_mixin.py:190} INFO - Table: customer_demographics -- parquetfile: /data/postgres/customer_demographics/2025-01-30/file.parquet
+[2025-01-30T04:30:15.295+0000] {logging_mixin.py:190} INFO - Tabela customer_demographics não existe. Criando a tabela...
+[2025-01-30T04:30:15.297+0000] {logging_mixin.py:190} INFO - Erro ao atualizar ou criar tabela customer_demographics: name 'get_postgres_type' is not defined
+[2025-01-30T04:30:15.308+0000] {logging_mixin.py:190} INFO - Table: employees -- parquetfile: /data/postgres/employees/2025-01-30/file.parquet
+[2025-01-30T04:30:15.328+0000] {logging_mixin.py:190} INFO - Tabela employees não existe. Criando a tabela...
+[2025-01-30T04:30:15.329+0000] {logging_mixin.py:190} INFO - Erro ao atualizar ou criar tabela employees: name 'get_postgres_type' is not defined
+[2025-01-30T04:30:15.341+0000] {logging_mixin.py:190} INFO - Table: employee_territories -- parquetfile: /data/postgres/employee_territories/2025-01-30/file.parquet
+[2025-01-30T04:30:15.356+0000] {logging_mixin.py:190} INFO - Tabela employee_territories não existe. Criando a tabela...
+[2025-01-30T04:30:15.357+0000] {logging_mixin.py:190} INFO - Erro ao atualizar ou criar tabela employee_territories: name 'get_postgres_type' is not defined
+[2025-01-30T04:30:15.368+0000] {logging_mixin.py:190} INFO - Table: orders -- parquetfile: /data/postgres/orders/2025-01-30/file.parquet
+[2025-01-30T04:30:15.388+0000] {logging_mixin.py:190} INFO - Tabela orders não existe. Criando a tabela...
+[2025-01-30T04:30:15.389+0000] {logging_mixin.py:190} INFO - Erro ao atualizar ou criar tabela orders: name 'get_postgres_type' is not defined
+[2025-01-30T04:30:15.401+0000] {logging_mixin.py:190} INFO - Table: products -- parquetfile: /data/postgres/products/2025-01-30/file.parquet
+[2025-01-30T04:30:15.419+0000] {logging_mixin.py:190} INFO - Tabela products não existe. Criando a tabela...
+[2025-01-30T04:30:15.421+0000] {logging_mixin.py:190} INFO - Erro ao atualizar ou criar tabela products: name 'get_postgres_type' is not defined
+[2025-01-30T04:30:15.433+0000] {logging_mixin.py:190} INFO - Table: region -- parquetfile: /data/postgres/region/2025-01-30/file.parquet
+[2025-01-30T04:30:15.449+0000] {logging_mixin.py:190} INFO - Tabela region não existe. Criando a tabela...
+[2025-01-30T04:30:15.450+0000] {logging_mixin.py:190} INFO - Erro ao atualizar ou criar tabela region: name 'get_postgres_type' is not defined
+[2025-01-30T04:30:15.462+0000] {logging_mixin.py:190} INFO - Table: shippers -- parquetfile: /data/postgres/shippers/2025-01-30/file.parquet
+[2025-01-30T04:30:15.478+0000] {logging_mixin.py:190} INFO - Tabela shippers não existe. Criando a tabela...
+[2025-01-30T04:30:15.479+0000] {logging_mixin.py:190} INFO - Erro ao atualizar ou criar tabela shippers: name 'get_postgres_type' is not defined
+[2025-01-30T04:30:15.491+0000] {logging_mixin.py:190} INFO - Table: suppliers -- parquetfile: /data/postgres/suppliers/2025-01-30/file.parquet
+[2025-01-30T04:30:15.508+0000] {logging_mixin.py:190} INFO - Tabela suppliers não existe. Criando a tabela...
+[2025-01-30T04:30:15.509+0000] {logging_mixin.py:190} INFO - Erro ao atualizar ou criar tabela suppliers: name 'get_postgres_type' is not defined
+[2025-01-30T04:30:15.521+0000] {logging_mixin.py:190} INFO - Table: territories -- parquetfile: /data/postgres/territories/2025-01-30/file.parquet
+[2025-01-30T04:30:15.538+0000] {logging_mixin.py:190} INFO - Tabela territories não existe. Criando a tabela...
+[2025-01-30T04:30:15.539+0000] {logging_mixin.py:190} INFO - Erro ao atualizar ou criar tabela territories: name 'get_postgres_type' is not defined
+[2025-01-30T04:30:15.550+0000] {logging_mixin.py:190} INFO - Table: us_states -- parquetfile: /data/postgres/us_states/2025-01-30/file.parquet
+[2025-01-30T04:30:15.568+0000] {logging_mixin.py:190} INFO - Tabela us_states não existe. Criando a tabela...
+[2025-01-30T04:30:15.569+0000] {logging_mixin.py:190} INFO - Erro ao atualizar ou criar tabela us_states: name 'get_postgres_type' is not defined
+[2025-01-30T04:30:15.571+0000] {python.py:240} INFO - Done. Returned value was: True
+[2025-01-30T04:30:15.613+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-01-30T04:30:15.614+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=etapa2_dag, task_id=copia, run_id=manual__2025-01-30T03:32:35.404173+00:00, execution_date=20250130T033235, start_date=20250130T043014, end_date=20250130T043015
+[2025-01-30T04:30:15.633+0000] {logging_mixin.py:190} INFO - Task instance in success state
+[2025-01-30T04:30:15.634+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: running
+[2025-01-30T04:30:15.635+0000] {logging_mixin.py:190} INFO - Dag name:etapa2_dag queued_at:2025-01-30 04:30:05.293498+00:00
+[2025-01-30T04:30:15.635+0000] {logging_mixin.py:190} INFO - Task hostname:eed2ce10479b operator:PythonOperator
+[2025-01-30T04:30:15.685+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-01-30T04:30:15.709+0000] {taskinstance.py:3895} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-01-30T04:30:15.714+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

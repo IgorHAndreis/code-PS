@@ -1,0 +1,84 @@
+[2025-01-30T01:14:40.062+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-01-30T01:14:40.085+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: etapa1_dag.conectaBD scheduled__2025-01-29T00:00:00+00:00 [queued]>
+[2025-01-30T01:14:40.096+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: etapa1_dag.conectaBD scheduled__2025-01-29T00:00:00+00:00 [queued]>
+[2025-01-30T01:14:40.097+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 1
+[2025-01-30T01:14:40.116+0000] {taskinstance.py:2889} INFO - Executing <Task(PythonOperator): conectaBD> on 2025-01-29 00:00:00+00:00
+[2025-01-30T01:14:40.124+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=86) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-01-30T01:14:40.127+0000] {standard_task_runner.py:72} INFO - Started process 92 to run task
+[2025-01-30T01:14:40.126+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'etapa1_dag', 'conectaBD', 'scheduled__2025-01-29T00:00:00+00:00', '--job-id', '4', '--raw', '--subdir', 'DAGS_FOLDER/etapa1_dag.py', '--cfg-path', '/tmp/tmp9_2sldhq']
+[2025-01-30T01:14:40.127+0000] {standard_task_runner.py:105} INFO - Job 4: Subtask conectaBD
+[2025-01-30T01:14:40.194+0000] {task_command.py:467} INFO - Running <TaskInstance: etapa1_dag.conectaBD scheduled__2025-01-29T00:00:00+00:00 [running]> on host 8fdf061243ba
+[2025-01-30T01:14:40.293+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='etapa1_dag' AIRFLOW_CTX_TASK_ID='conectaBD' AIRFLOW_CTX_EXECUTION_DATE='2025-01-29T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-01-29T00:00:00+00:00'
+[2025-01-30T01:14:40.295+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2025-01-30T01:14:40.296+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2025-01-30T01:14:40.297+0000] {logging_mixin.py:190} INFO - Current task name:conectaBD state:running start_date:2025-01-30 01:14:40.086344+00:00
+[2025-01-30T01:14:40.297+0000] {logging_mixin.py:190} INFO - Dag name:etapa1_dag and current dag run status:running
+[2025-01-30T01:14:40.298+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-01-30T01:14:40.299+0000] {python.py:240} INFO - Done. Returned value was: None
+[2025-01-30T01:14:40.312+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-01-30T01:14:40.312+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=etapa1_dag, task_id=conectaBD, run_id=scheduled__2025-01-29T00:00:00+00:00, execution_date=20250129T000000, start_date=20250130T011440, end_date=20250130T011440
+[2025-01-30T01:14:40.325+0000] {logging_mixin.py:190} INFO - Task instance in success state
+[2025-01-30T01:14:40.326+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: running
+[2025-01-30T01:14:40.326+0000] {logging_mixin.py:190} INFO - Dag name:etapa1_dag queued_at:2025-01-30 01:14:34.654323+00:00
+[2025-01-30T01:14:40.327+0000] {logging_mixin.py:190} INFO - Task hostname:8fdf061243ba operator:PythonOperator
+[2025-01-30T01:14:40.343+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-01-30T01:14:40.375+0000] {taskinstance.py:3895} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-01-30T01:14:40.379+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2025-01-30T01:56:25.527+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-01-30T01:56:25.553+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: etapa1_dag.conectaBD scheduled__2025-01-29T00:00:00+00:00 [queued]>
+[2025-01-30T01:56:25.565+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: etapa1_dag.conectaBD scheduled__2025-01-29T00:00:00+00:00 [queued]>
+[2025-01-30T01:56:25.566+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 1
+[2025-01-30T01:56:25.587+0000] {taskinstance.py:2889} INFO - Executing <Task(PythonOperator): conectaBD> on 2025-01-29 00:00:00+00:00
+[2025-01-30T01:56:25.597+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=100) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-01-30T01:56:25.599+0000] {standard_task_runner.py:72} INFO - Started process 104 to run task
+[2025-01-30T01:56:25.599+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'etapa1_dag', 'conectaBD', 'scheduled__2025-01-29T00:00:00+00:00', '--job-id', '4', '--raw', '--subdir', 'DAGS_FOLDER/etapa1_dag.py', '--cfg-path', '/tmp/tmpaya9yxbl']
+[2025-01-30T01:56:25.600+0000] {standard_task_runner.py:105} INFO - Job 4: Subtask conectaBD
+[2025-01-30T01:56:25.670+0000] {task_command.py:467} INFO - Running <TaskInstance: etapa1_dag.conectaBD scheduled__2025-01-29T00:00:00+00:00 [running]> on host 041548b4f536
+[2025-01-30T01:56:25.788+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='etapa1_dag' AIRFLOW_CTX_TASK_ID='conectaBD' AIRFLOW_CTX_EXECUTION_DATE='2025-01-29T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-01-29T00:00:00+00:00'
+[2025-01-30T01:56:25.790+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2025-01-30T01:56:25.791+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2025-01-30T01:56:25.792+0000] {logging_mixin.py:190} INFO - Current task name:conectaBD state:running start_date:2025-01-30 01:56:25.553820+00:00
+[2025-01-30T01:56:25.792+0000] {logging_mixin.py:190} INFO - Dag name:etapa1_dag and current dag run status:running
+[2025-01-30T01:56:25.793+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-01-30T01:56:25.832+0000] {python.py:240} INFO - Done. Returned value was: True
+[2025-01-30T01:56:25.869+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-01-30T01:56:25.870+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=etapa1_dag, task_id=conectaBD, run_id=scheduled__2025-01-29T00:00:00+00:00, execution_date=20250129T000000, start_date=20250130T015625, end_date=20250130T015625
+[2025-01-30T01:56:25.886+0000] {logging_mixin.py:190} INFO - Task instance in success state
+[2025-01-30T01:56:25.886+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: running
+[2025-01-30T01:56:25.887+0000] {logging_mixin.py:190} INFO - Dag name:etapa1_dag queued_at:2025-01-30 01:56:19.496986+00:00
+[2025-01-30T01:56:25.888+0000] {logging_mixin.py:190} INFO - Task hostname:041548b4f536 operator:PythonOperator
+[2025-01-30T01:56:25.935+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-01-30T01:56:25.971+0000] {taskinstance.py:3895} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-01-30T01:56:25.975+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2025-01-30T02:25:58.995+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-01-30T02:25:59.016+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: etapa1_dag.conectaBD scheduled__2025-01-29T00:00:00+00:00 [queued]>
+[2025-01-30T02:25:59.025+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: etapa1_dag.conectaBD scheduled__2025-01-29T00:00:00+00:00 [queued]>
+[2025-01-30T02:25:59.026+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 1
+[2025-01-30T02:25:59.044+0000] {taskinstance.py:2889} INFO - Executing <Task(PythonOperator): conectaBD> on 2025-01-29 00:00:00+00:00
+[2025-01-30T02:25:59.054+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=93) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-01-30T02:25:59.057+0000] {standard_task_runner.py:72} INFO - Started process 96 to run task
+[2025-01-30T02:25:59.056+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'etapa1_dag', 'conectaBD', 'scheduled__2025-01-29T00:00:00+00:00', '--job-id', '3', '--raw', '--subdir', 'DAGS_FOLDER/etapa1_dag.py', '--cfg-path', '/tmp/tmpkv17dntt']
+[2025-01-30T02:25:59.058+0000] {standard_task_runner.py:105} INFO - Job 3: Subtask conectaBD
+[2025-01-30T02:25:59.125+0000] {task_command.py:467} INFO - Running <TaskInstance: etapa1_dag.conectaBD scheduled__2025-01-29T00:00:00+00:00 [running]> on host 1899222f083d
+[2025-01-30T02:25:59.237+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='etapa1_dag' AIRFLOW_CTX_TASK_ID='conectaBD' AIRFLOW_CTX_EXECUTION_DATE='2025-01-29T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-01-29T00:00:00+00:00'
+[2025-01-30T02:25:59.238+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2025-01-30T02:25:59.239+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2025-01-30T02:25:59.240+0000] {logging_mixin.py:190} INFO - Current task name:conectaBD state:running start_date:2025-01-30 02:25:59.016932+00:00
+[2025-01-30T02:25:59.240+0000] {logging_mixin.py:190} INFO - Dag name:etapa1_dag and current dag run status:running
+[2025-01-30T02:25:59.241+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-01-30T02:25:59.285+0000] {python.py:240} INFO - Done. Returned value was: True
+[2025-01-30T02:25:59.319+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-01-30T02:25:59.320+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=etapa1_dag, task_id=conectaBD, run_id=scheduled__2025-01-29T00:00:00+00:00, execution_date=20250129T000000, start_date=20250130T022559, end_date=20250130T022559
+[2025-01-30T02:25:59.334+0000] {logging_mixin.py:190} INFO - Task instance in success state
+[2025-01-30T02:25:59.335+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: running
+[2025-01-30T02:25:59.335+0000] {logging_mixin.py:190} INFO - Dag name:etapa1_dag queued_at:2025-01-30 02:25:52.938471+00:00
+[2025-01-30T02:25:59.336+0000] {logging_mixin.py:190} INFO - Task hostname:1899222f083d operator:PythonOperator
+[2025-01-30T02:25:59.395+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-01-30T02:25:59.429+0000] {taskinstance.py:3895} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-01-30T02:25:59.434+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

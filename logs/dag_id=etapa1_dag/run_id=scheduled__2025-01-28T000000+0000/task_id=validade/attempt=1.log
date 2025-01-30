@@ -1,0 +1,32 @@
+[2025-01-29T18:14:23.407+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-01-29T18:14:23.434+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: etapa1_dag.validade scheduled__2025-01-28T00:00:00+00:00 [queued]>
+[2025-01-29T18:14:23.447+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: etapa1_dag.validade scheduled__2025-01-28T00:00:00+00:00 [queued]>
+[2025-01-29T18:14:23.448+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 1
+[2025-01-29T18:14:23.474+0000] {taskinstance.py:2889} INFO - Executing <Task(BranchPythonOperator): validade> on 2025-01-28 00:00:00+00:00
+[2025-01-29T18:14:23.487+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=94) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-01-29T18:14:23.489+0000] {standard_task_runner.py:72} INFO - Started process 98 to run task
+[2025-01-29T18:14:23.490+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'etapa1_dag', 'validade', 'scheduled__2025-01-28T00:00:00+00:00', '--job-id', '7', '--raw', '--subdir', 'DAGS_FOLDER/etapa1_dag.py', '--cfg-path', '/tmp/tmp0xkz0f4y']
+[2025-01-29T18:14:23.491+0000] {standard_task_runner.py:105} INFO - Job 7: Subtask validade
+[2025-01-29T18:14:23.861+0000] {task_command.py:467} INFO - Running <TaskInstance: etapa1_dag.validade scheduled__2025-01-28T00:00:00+00:00 [running]> on host 85767b30d73d
+[2025-01-29T18:14:23.984+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='etapa1_dag' AIRFLOW_CTX_TASK_ID='validade' AIRFLOW_CTX_EXECUTION_DATE='2025-01-28T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-01-28T00:00:00+00:00'
+[2025-01-29T18:14:23.986+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2025-01-29T18:14:23.986+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2025-01-29T18:14:23.987+0000] {logging_mixin.py:190} INFO - Current task name:validade state:running start_date:2025-01-29 18:14:23.435159+00:00
+[2025-01-29T18:14:23.988+0000] {logging_mixin.py:190} INFO - Dag name:etapa1_dag and current dag run status:running
+[2025-01-29T18:14:23.988+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-01-29T18:14:23.989+0000] {baseoperator.py:421} WARNING - BranchPythonOperator.execute cannot be called outside TaskInstance!
+[2025-01-29T18:14:24.003+0000] {python.py:240} INFO - Done. Returned value was: invalido
+[2025-01-29T18:14:24.004+0000] {branch.py:38} INFO - Branch into invalido
+[2025-01-29T18:14:24.004+0000] {skipmixin.py:230} INFO - Following branch ('invalido',)
+[2025-01-29T18:14:24.024+0000] {skipmixin.py:278} INFO - Skipping tasks [('valido', -1)]
+[2025-01-29T18:14:24.075+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-01-29T18:14:24.076+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=etapa1_dag, task_id=validade, run_id=scheduled__2025-01-28T00:00:00+00:00, execution_date=20250128T000000, start_date=20250129T181423, end_date=20250129T181424
+[2025-01-29T18:14:24.091+0000] {logging_mixin.py:190} INFO - Task instance in success state
+[2025-01-29T18:14:24.092+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: running
+[2025-01-29T18:14:24.092+0000] {logging_mixin.py:190} INFO - Dag name:etapa1_dag queued_at:2025-01-29 18:14:14.640814+00:00
+[2025-01-29T18:14:24.093+0000] {logging_mixin.py:190} INFO - Task hostname:85767b30d73d operator:BranchPythonOperator
+[2025-01-29T18:14:24.148+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-01-29T18:14:24.402+0000] {taskinstance.py:3895} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-01-29T18:14:24.406+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

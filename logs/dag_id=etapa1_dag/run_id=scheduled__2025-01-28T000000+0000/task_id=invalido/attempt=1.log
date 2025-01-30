@@ -1,0 +1,32 @@
+[2025-01-29T18:14:27.197+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-01-29T18:14:27.225+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: etapa1_dag.invalido scheduled__2025-01-28T00:00:00+00:00 [queued]>
+[2025-01-29T18:14:27.238+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: etapa1_dag.invalido scheduled__2025-01-28T00:00:00+00:00 [queued]>
+[2025-01-29T18:14:27.239+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 1
+[2025-01-29T18:14:27.257+0000] {taskinstance.py:2889} INFO - Executing <Task(BashOperator): invalido> on 2025-01-28 00:00:00+00:00
+[2025-01-29T18:14:27.267+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=102) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-01-29T18:14:27.270+0000] {standard_task_runner.py:72} INFO - Started process 106 to run task
+[2025-01-29T18:14:27.271+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'etapa1_dag', 'invalido', 'scheduled__2025-01-28T00:00:00+00:00', '--job-id', '9', '--raw', '--subdir', 'DAGS_FOLDER/etapa1_dag.py', '--cfg-path', '/tmp/tmptn69s56t']
+[2025-01-29T18:14:27.272+0000] {standard_task_runner.py:105} INFO - Job 9: Subtask invalido
+[2025-01-29T18:14:27.549+0000] {task_command.py:467} INFO - Running <TaskInstance: etapa1_dag.invalido scheduled__2025-01-28T00:00:00+00:00 [running]> on host 85767b30d73d
+[2025-01-29T18:14:27.649+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='etapa1_dag' AIRFLOW_CTX_TASK_ID='invalido' AIRFLOW_CTX_EXECUTION_DATE='2025-01-28T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-01-28T00:00:00+00:00'
+[2025-01-29T18:14:27.650+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2025-01-29T18:14:27.651+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2025-01-29T18:14:27.652+0000] {logging_mixin.py:190} INFO - Current task name:invalido state:running start_date:2025-01-29 18:14:27.225870+00:00
+[2025-01-29T18:14:27.652+0000] {logging_mixin.py:190} INFO - Dag name:etapa1_dag and current dag run status:running
+[2025-01-29T18:14:27.653+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-01-29T18:14:27.654+0000] {subprocess.py:78} INFO - Tmp dir root location: /tmp
+[2025-01-29T18:14:27.655+0000] {subprocess.py:88} INFO - Running command: ['/usr/bin/bash', '-c', "echo 'Error'"]
+[2025-01-29T18:14:27.672+0000] {subprocess.py:99} INFO - Output:
+[2025-01-29T18:14:27.674+0000] {subprocess.py:106} INFO - Error
+[2025-01-29T18:14:27.675+0000] {subprocess.py:110} INFO - Command exited with return code 0
+[2025-01-29T18:14:27.706+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-01-29T18:14:27.707+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=etapa1_dag, task_id=invalido, run_id=scheduled__2025-01-28T00:00:00+00:00, execution_date=20250128T000000, start_date=20250129T181427, end_date=20250129T181427
+[2025-01-29T18:14:27.732+0000] {logging_mixin.py:190} INFO - Task instance in success state
+[2025-01-29T18:14:27.733+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: running
+[2025-01-29T18:14:27.733+0000] {logging_mixin.py:190} INFO - Dag name:etapa1_dag queued_at:2025-01-29 18:14:14.640814+00:00
+[2025-01-29T18:14:27.734+0000] {logging_mixin.py:190} INFO - Task hostname:85767b30d73d operator:BashOperator
+[2025-01-29T18:14:27.768+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-01-29T18:14:27.972+0000] {taskinstance.py:3895} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-01-29T18:14:27.982+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

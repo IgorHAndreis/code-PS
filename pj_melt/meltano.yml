@@ -1,0 +1,35 @@
+version: 1
+default_environment: dev
+project_id: 6d288ebf-d4e0-4db6-8f4f-9cd319876e16
+environments:
+- name: dev
+- name: staging
+- name: prod
+plugins:
+  extractors:
+  - name: tap-postgres
+    variant: meltanolabs
+    pip_url: git+https://github.com/MeltanoLabs/tap-postgres.git
+    config:
+      host: host.docker.internal
+      port: 5432
+      user: northwind_user
+      password: thewindisblowing
+      dbname: northwind
+      database: northwind
+  loaders:
+  - name: target-csv
+    variant: meltanolabs
+    pip_url: git+https://github.com/MeltanoLabs/target-csv.git
+    config:
+      path: ./output
+      output_path: ./output
+  - name: target-parquet
+    variant: automattic
+    pip_url: git+https://github.com/Automattic/target-parquet.git
+  - name: target-postgres
+    variant: meltanolabs
+    pip_url: meltanolabs-target-postgres
+  utilities:
+  - name: postgres
+    variant: postgres
